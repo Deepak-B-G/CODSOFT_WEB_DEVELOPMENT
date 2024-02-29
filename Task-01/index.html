@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <script src="index.js" defer></script>
+    <script src="https://tarptaeya.github.io/repo-card/repo-card.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+
+
     <title>Deepak B G</title>
 </head>
 
@@ -20,21 +25,22 @@
     </div>
 
     <nav>
-        <a href="#">Home</a>
-        <a href="#about">About</a>
-        <a href="#expertise">Expertise</a>
-        <a href="#work">Work</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-    </nav> 
+        <a href="#">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#expertise">EXPERTISE</a>
+        <a href="#project">PROJECTS</a>
+        <a href="#certificate">CERTIFICATES</a>
+        <a href="#experience">EXPERIENCE</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
     <div class="content" id="about">
         <div class="photo">
             <img src="Photo.png" alt="My photo" height="800px">
         </div>
-    
+
         <div class="content-text">
             <h1>ABOUT ME</h1>
-            <h1>Hi, Its  DEEPAK B G</h1>
+            <h1>Hi, Its DEEPAK B G</h1>
             <p>As a student at Dayananda Sagar University, I am currently immersed in a B.Tech program specializing in
                 Computer Science. Throughout my academic journey, I've consistently showcased a dedication to excellence
                 in my coursework.
@@ -47,7 +53,7 @@
                 projects and endeavors that align with my passions and aspirations.
         </div>
     </div>
-    
+
 
     <div class="Expertise" id="expertise">
         <h1>MY EXPERTISE</h1>
@@ -142,12 +148,92 @@
         </div>
     </div>
 
-    </div>
-    
-    <div class="my-project">
-        <!-- Project content goes here -->
+    <div class="my-project" id="project">
+        <h1>MY PROJECTS</h1>
+        <div class="project-list">
+            <div class="project">
+                <h1>JAIPUR TOURIST WEBSITE</h1>
+                <img src="Images/Jaipur-image.png" alt="Jaipur-image">
+                <div class="repo-card" data-repo="Deepak-B-G/Pink_Panthers_product_deployment"></div>
+            </div>
 
+            <div class="project">
+                <h1>WEATHER APPLICATION</h1>
+                <img src="Images/Weather-app.png" alt="Weather App">
+                <div class="repo-card" data-repo="Deepak-B-G/Weather-Application"></div>
+            </div>
+
+            <div class="project">
+                <h1>PROXY SERVER</h1>
+                <img src="Images/proxy-server.png" alt="Proxy">
+                <div class="repo-card" data-repo="Deepak-B-G/MultiThread_in_OS"></div>
+            </div>
+        </div>
     </div>
+
+
+
+    <div class="Certificate" id="certificate">
+        <h1>CERTIFICATES</h1>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="Images/Power Bi by PwC _page-0001.jpg" alt="Certificate 1">
+                    <h3>POWER BI CERTIFICATION BY PwC SWITZERLAND</h3>
+                </div>
+                <div class="swiper-slide"><img src="Images/MYSQL certificate_page-0001.jpg" alt="Certificate 2">
+                    <h3>MY SQL DATABASE MASTERY BY UDEMY</h3>
+                </div>
+                <div class="swiper-slide"><img src="Images/data engineering.jpg" alt="Certificate 3">
+                    <h3>DATA ENGINEERING IN RAPID MINER </h3>
+                </div>
+                <div class="swiper-slide"><img src="Images/Tableau.jpg" alt="Certificate 4">
+                    <h3>DASHBOARDING USING TABLEAU </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 5000, // 5 seconds delay
+            }
+        });
+    </script>
+
+    <div class="Experience" id="experience">
+        <h1>INTERNSHIP EXPERIENCE</h1>
+
+        <div class="experience-container">
+            <div class="image">
+                <img src="Images/Internship-CodSoft.jpg" alt="Internship Certificate" height="400px">
+            </div>
+
+            <div class="internship-details">
+                <h1>DATA SCIENCE VIRTUAL INTERNSHIP</h1>
+                <h2>Organization Name: CodSoft</h2>
+                <h3>JAN 2024 to FEB 2024 </h3>
+                <ul>
+                    <li>Data Cleaning and Preprocessing: Ensuring dataset quality and reliability with techniques like
+                        handling missing values and standardizing formats. </li>
+                    <li>Exploratory Data Analysis (EDA): Uncovering patterns and relationships using visualizations like
+                        histograms and scatter plots.</li>
+                    <li>Feature Engineering: Extracting meaningful insights and improving model performance through
+                        techniques like feature scaling and dimensionality reduction.</li>
+                    <li>Model Building: Predicting outcomes using algorithms such as linear regression and decision
+                        trees.</li>
+                    <li>Model Evaluation and Fine-tuning: Assessing model performance with metrics like accuracy and
+                        enhancing predictive capabilities through techniques like cross-validation.</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
 
     <div class="parallax">
         <div class="parallax-text">
