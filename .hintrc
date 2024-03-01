@@ -16,6 +16,7 @@
           "scale"
         ]
       }
-    ]
+    ],
+    "disown-opener": "off"
   }
 }
