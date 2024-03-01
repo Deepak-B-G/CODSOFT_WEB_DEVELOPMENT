@@ -49,7 +49,7 @@
         background-color: var(--color-black);
         margin: 0;
         font-family: Comic Sans MS, Comic Sans, cursive;
-        
+
     }
 
     nav {
@@ -66,11 +66,10 @@
         z-index: 1000;
         font-size: x-large;
         margin-bottom: 20px;
-        border: 1px solid rgba(0, 0, 0, 1); 
-        background-color: rgba(0, 0, 0, 1); 
-        animation: fadeInNav 1s ease forwards
+        border: 1px solid rgba(0, 0, 0, 1);
+        background-color: rgba(0, 0, 0, 1);
+        animation: fadeInNav 1s ease forwards;
     }
-
 
     nav a {
         color: var(--color-lighter);
@@ -99,14 +98,18 @@
         text-decoration: none;
     }
 
+
     @keyframes fadeIn {
         from {
             opacity: 0;
-            transform: translateY(20px); /* Example: Fade in from bottom */
+            transform: translateY(20px);
+            /* Example: Fade in from bottom */
         }
+
         to {
             opacity: 1;
-            transform: translateY(0); /* Example: Fade in from bottom */
+            transform: translateY(0);
+            /* Example: Fade in from bottom */
         }
     }
 
@@ -155,7 +158,7 @@
         margin-bottom: 250px;
     }
 
-    .Expertise H1{
+    .Expertise H1 {
         margin-top: 100px;
         color: var(--color-light);
     }
@@ -212,10 +215,10 @@
         width: max-content;
         padding: 20px;
         margin-left: 10px 10px;
-        
+
     }
 
-    .my-project H1{
+    .my-project H1 {
         color: var(--color-light);
         text-align: center;
         margin-top: 80px;
@@ -224,7 +227,7 @@
 
     .project-list {
         display: grid;
-        grid-template-columns: repeat(3, minmax(300px, 1fr)); 
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
         gap: 20px;
     }
 
@@ -233,7 +236,7 @@
         padding: 10px;
         border: 1px solid var(--color-darker);
         border-radius: 5px;
-        text-align: center; 
+        text-align: center;
     }
 
     .project h1 {
@@ -241,11 +244,12 @@
     }
 
     .project img {
-        height: 200px; 
-        width: auto; 
-        object-fit: contain; 
+        height: 200px;
+        width: auto;
+        object-fit: contain;
         border-radius: 10px;
     }
+
     .project img:hover {
         transform: scale(1.1);
     }
@@ -253,7 +257,7 @@
     .repo-card {
         margin-top: 10px;
         width: 100%;
-        height: 200px; 
+        height: 200px;
         background-color: var(--color-darker);
         border-radius: 10px;
     }
@@ -268,7 +272,7 @@
         height: auto;
         margin-bottom: 250px;
         width: 100%;
-    
+
     }
 
     .Certificate H1 {
@@ -289,7 +293,8 @@
         max-width: 100%;
         height: 50vh;
         transition: 5s ease-in;
-        object-fit: contain; /* Ensure the entire image fits within the container */
+        object-fit: contain;
+        /* Ensure the entire image fits within the container */
     }
 
     .Experience {
@@ -301,38 +306,40 @@
         margin-bottom: 200px;
     }
 
-    .Experience H1 {
+    .Experience h1 {
         margin-top: 100px;
         text-align: center;
-        
     }
 
     .experience-container {
-        display: flex; 
-        justify-content: space-between; 
+        display: flex;
+        flex-direction: row;
+        /* Keep content in a row */
     }
-    
+
     .image {
-        flex: 1; 
-        margin-right: 20px; 
-        margin-top: 100px;
+        flex: 1;
+        margin-right: 20px;
     }
 
+    .image img {
+        width: 100%;
+        height: auto;
+    }
 
-
-    
     .internship-details {
-        flex: 2;
+        flex: 1;
         text-align: left;
     }
-    
+
+
+
 
     .Contact {
         display: block;
         text-align: left;
         padding: 20px;
         color: var(--color-light);
-
         animation: fadeIn 3s ease forwards;
         height: auto;
         margin-bottom: 200px;
@@ -343,26 +350,18 @@
         text-align: center;
     }
 
+    .contact-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
     .resume {
-        float: left;
-        width: 50%;
-        padding-right: 20px;
+        margin-bottom: 20px;
     }
     
-    .resume embed {
-        display: block;
-        margin: 0 auto;
-    }
-    
-    .resume a {
-        display: block;
-        text-align: center;
-        margin-top: 20px;
-    }
-    
-
-
 .download-button {
+    margin-top: 20px;
     text-decoration: none;
     background-color: #007bff;
     color: #fff;
@@ -375,48 +374,34 @@
     background-color: #0056b3;
 }
 
-    .social-media {
-        float: right;
-        width: 50%;
-    }
-    
-    .contact-container {
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    @media only screen and (max-width: 768px) {
-        .resume,
-        .social-media {
-            width: 100%;
-            float: none;
-        }
-    }
-    
+.social-media {
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    margin-left: 200px;
+    width: 100%;
+    height: 100vh; /* Adjust height as needed */
+}
 
-    .main {
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    width: 200%; 
+    max-width: 400px;
+}
+    .up {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         gap: 0.5em;
-        width: 200%;
-        justify-content: center;
-        margin-left: auto;
-        margin-right: auto; /* Add this line to center horizontally */
-        max-width: 800px; /* Adjust max-width as needed */
     }
-      .up {
+
+    .down {
         display: flex;
         flex-direction: row;
         gap: 0.5em;
-      }
-      
-      .down {
-        display: flex;
-        flex-direction: row;
-        gap: 0.5em;
-      }
-      
-      .card1 {
+    }
+
+    .card1 {
         width: 90px;
         height: 90px;
         outline: none;
@@ -424,17 +409,17 @@
         background: white;
         border-radius: 90px 5px 5px 5px;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-          rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
         transition: 0.2s ease-in-out;
-      }
-      
-      .whatsapp {
+    }
+
+    .whatsapp {
         margin-top: 1.5em;
         margin-left: 1.2em;
         fill: #00ff00;
-      }
-      
-      .card2 {
+    }
+
+    .card2 {
         width: 90px;
         height: 90px;
         outline: none;
@@ -442,17 +427,17 @@
         background: white;
         border-radius: 5px 90px 5px 5px;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-          rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
         transition: 0.2s ease-in-out;
-      }
-      
-      .linkedin {
+    }
+
+    .linkedin {
         margin-top: 1.5em;
         margin-left: -0.9em;
         fill: #0077b5;
-      }
-      
-      .card3 {
+    }
+
+    .card3 {
         width: 90px;
         height: 90px;
         outline: none;
@@ -460,16 +445,16 @@
         background: white;
         border-radius: 5px 5px 5px 90px;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-          rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
         transition: 0.2s ease-in-out;
-      }
-      
-      .github {
+    }
+
+    .github {
         margin-top: -0.6em;
         margin-left: 1.2em;
-      }
-      
-      .card4 {
+    }
+
+    .card4 {
         width: 90px;
         height: 90px;
         outline: none;
@@ -478,54 +463,328 @@
         border-radius: 5px 5px 90px 5px;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
         transition: .2s ease-in-out;
-      }
-      
-      .gmail {
+    }
+
+    .gmail {
         margin-top: -.9em;
         margin-left: -1.2em;
         fill: #f14336;
-      }
-      .card1:hover {
+    }
+
+    .card1:hover {
         cursor: pointer;
         scale: 1.1;
         background-color: #00ff00;
 
-      }
-      
-      .card1:hover .whatsapp {
+    }
+
+    .card1:hover .whatsapp {
         fill: white;
-      }
-      
-      .card2:hover {
+    }
+
+    .card2:hover {
         cursor: pointer;
         scale: 1.1;
         background-color: #0077b5;
-      }
-      
-      .card2:hover .linkedin {
+    }
+
+    .card2:hover .linkedin {
         fill: white;
-      }
-      
-      .card3:hover {
+    }
+
+    .card3:hover {
         cursor: pointer;
         scale: 1.1;
         background-color: black;
-      }
-      
-      .card3:hover .github {
+    }
+
+    .card3:hover .github {
         fill: white;
-      }
-      
-      .card4:hover {
+    }
+
+    .card4:hover {
         cursor: pointer;
         scale: 1.1;
         background-color: #FF0004;
-      }
-      
-      .card4:hover .gmail {
+    }
+
+    .card4:hover .gmail {
         fill: white;
-      }
-    
+    }
+
+
+    .nav-button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 0 10px;
+        text-decoration: none;
+        color: #fff;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+
+
+    /* Media query for screens up to 768px wide */
+    @media only screen and (max-width: 768px) {
+        .parallax-text {
+            text-align: center;
+            color: #ffffff;
+            font-size: 0.9em;
+        }
+
+        nav {
+            display: none;
+        }
+
+        .photo img {
+            height: 300px;
+            box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
+        }
+
+        .content {
+            flex-direction: column;
+        }
+
+        .content-text h1 {
+            text-align: center;
+        }
+
+        .content-text p {
+            font-size: 1em;
+            text-align: left;
+            margin-bottom: 100;
+        }
+
+        #expertise {
+            margin-top: 700px;
+        }
+
+        .my-project {
+            width: auto;
+            padding: 20px;
+            margin: 0 auto;
+        }
+
+        .my-project h1 {
+            color: var(--color-light);
+            text-align: center;
+
+        }
+
+        .project-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(200px, 1fr));
+            gap: 50px;
+
+        }
+
+        .project {
+            background-color: var(--color-light);
+            padding: 10px;
+            border: 1px solid var(--color-darker);
+            border-radius: 5px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .project h1 {
+            color: var(--color-black);
+            font-size: large;
+        }
+
+        .project img {
+            height: 90px;
+            width: auto;
+            object-fit: contain;
+            aspect-ratio: 3/2;
+            border-radius: 10px;
+        }
+
+        .repo-card {
+            margin-top: 10px;
+            width: calc(100% - 20px);
+            height: 100px;
+            background-color: var(--color-darker);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .experience-container {
+            flex-direction: column;
+        }
+
+        .image,
+        .internship-details {
+            flex: 1;
+            margin: 20px 0;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .resume {
+            width: 200px;
+        }
+
+
+        .download-button {
+            text-decoration: none;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            width: auto;
+        }
+
+        .download-button:hover {
+            background-color: #0056b3;
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: center; /* Horizontally center the content */
+            margin-left: 200px;
+            width: 100%;
+            height: 100vh; /* Adjust height as needed */
+        }
+        
+        .main {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+            width: 200%; 
+            max-width: 400px;
+        }
+            .up {
+                display: flex;
+                flex-direction: row;
+                gap: 0.5em;
+            }
+        
+            .down {
+                display: flex;
+                flex-direction: row;
+                gap: 0.5em;
+            }
+        
+            .card1 {
+                width: 90px;
+                height: 90px;
+                outline: none;
+                border: none;
+                background: white;
+                border-radius: 90px 5px 5px 5px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+                    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                transition: 0.2s ease-in-out;
+            }
+        
+            .whatsapp {
+                margin-top: 1.5em;
+                margin-left: 1.2em;
+                fill: #00ff00;
+            }
+        
+            .card2 {
+                width: 90px;
+                height: 90px;
+                outline: none;
+                border: none;
+                background: white;
+                border-radius: 5px 90px 5px 5px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+                    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                transition: 0.2s ease-in-out;
+            }
+        
+            .linkedin {
+                margin-top: 1.5em;
+                margin-left: -0.9em;
+                fill: #0077b5;
+            }
+        
+            .card3 {
+                width: 90px;
+                height: 90px;
+                outline: none;
+                border: none;
+                background: white;
+                border-radius: 5px 5px 5px 90px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+                    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                transition: 0.2s ease-in-out;
+            }
+        
+            .github {
+                margin-top: -0.6em;
+                margin-left: 1.2em;
+            }
+        
+            .card4 {
+                width: 90px;
+                height: 90px;
+                outline: none;
+                border: none;
+                background: white;
+                border-radius: 5px 5px 90px 5px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                transition: .2s ease-in-out;
+            }
+        
+            .gmail {
+                margin-top: -.9em;
+                margin-left: -1.2em;
+                fill: #f14336;
+            }
+        
+            .card1:hover {
+                cursor: pointer;
+                scale: 1.1;
+                background-color: #00ff00;
+        
+            }
+        
+            .card1:hover .whatsapp {
+                fill: white;
+            }
+        
+            .card2:hover {
+                cursor: pointer;
+                scale: 1.1;
+                background-color: #0077b5;
+            }
+        
+            .card2:hover .linkedin {
+                fill: white;
+            }
+        
+            .card3:hover {
+                cursor: pointer;
+                scale: 1.1;
+                background-color: black;
+            }
+        
+            .card3:hover .github {
+                fill: white;
+            }
+        
+            .card4:hover {
+                cursor: pointer;
+                scale: 1.1;
+                background-color: #FF0004;
+            }
+        
+            .card4:hover .gmail {
+                fill: white;
+            }
+        
+
+    }
+
     .fadeIn {
         opacity: 1;
         transition: opacity 1s ease;
@@ -540,6 +799,7 @@
         from {
             opacity: 0;
         }
+
         to {
             opacity: 1;
         }
