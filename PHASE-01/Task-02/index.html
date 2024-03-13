@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PatilKaki</title>
+    <link rel="icon" href="images/logo.jpeg">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.10/flipclock.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <a href="#hero">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#why">WHY WE</a>
+        <a href="#course">COURSE</a>
+    </nav>
+
+    <div class="catchphrase-section" id="hero">
+        <h1>WELCOME</h1>
+        <div class="catchphrase">
+            <h2>Discover the Secret Recipe to D2C Success with Chef Darsheel Savla!</h2>
+            <br>
+            <h4>Unlock the flavors of Direct-to-Consumer (D2C) excellence with Chef Darsheel Savla. Join us on a
+                tantalizing journey where culinary expertise meets entrepreneurial flair. Learn the art of crafting
+                irresistible dishes and building thriving D2C businesses from the master himself. Get ready to savor
+                success one strategic ingredient at a time! 🍽️🚀</h4>
+        </div>
+    </div>
+
+    <div class="aboutus-section " id="about">
+        <h1>ABOUT US</h1>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div class="image">
+                        <img src="images/Darsheel Savla.jpg" alt="Darsheel Savla">
+                    </div>
+                    <h2>Darsheel Savla</h2>
+                    <h3>CO-FOUNDER, PatilKaki</h3>
+                </div>
+                <div class="flip-card-back">
+                    <div class="aboutus">
+                        <p>Darsheel Savla, a co-founder at PatilKaki, is a charismatic and creative powerhouse who
+                            infuses
+                            his
+                            passion for food, people, and brand building into everything he does. With an unshakable
+                            drive
+                            and an
+                            insatiable appetite for culinary exploration, he's determined to bring the legendary recipes
+                            of
+                            PatilKaki to the world. Also, a visionary leader with a passion for building D2C businesses,
+                            Darsheel is
+                            rolling out his new consultancy programme to help fellow founders and entrepreneurs navigate
+                            the
+                            challenges of going Direct-2-Consumer. Join him in this journey to gain various insights on
+                            industry
+                            secrets and how to supercharge the pace at which you learn and grow! </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="why-section " id="why">
+        <h1>WHY OUR SERVICES ??</h1>
+        <br>
+        <div class="container">
+            <div class="grid-item">
+                <img src="images/Expertise.jpg " alt="Expertise">
+                <h2>Expertise in D2C Strategies</h2>
+                <p>Darsheel brings years of experience and expertise in Direct-to-Consumer (D2C) strategies. With a deep
+                    understanding of market trends and consumer behavior, he can help tailor D2C strategies that align
+                    with your business goals and drive growth.</p>
+            </div>
+
+            <div class="grid-item">
+                <img src="images/Brand.png " alt="Brand">
+                <h2>Innovative Approach to Brand Building </h2>
+                <p>Darsheel adopts an innovative approach to brand building, leveraging creative ideas and cutting-edge
+                    techniques to establish and strengthen your brand presence. From branding strategies to visual
+                    identity design, he ensures your brand stands out in the competitive market landscape.</p>
+            </div>
+
+            <div class="grid-item">
+                <img src="images/consulting.png " alt="Consultation">
+                <h2>Personalized Consultation and Support</h2>
+                <p>Darsheel offers personalized consultation and support tailored to your business needs. Whether you're
+                    a startup looking to enter the D2C space or an established brand seeking to optimize your D2C
+                    operations, he provides hands-on guidance and support every step of the way.</p>
+            </div>
+
+            <div class="grid-item">
+                <img src="images/Success.png " alt="Success">
+                <h2>Track Record of Success</h2>
+                <p>Darsheel has a proven track record of success in helping businesses achieve their D2C goals. His
+                    strategic insights and practical solutions have led to measurable results, including increased
+                    sales, enhanced customer engagement, and improved brand loyalty.</p>
+            </div>
+
+            <div class="grid-item">
+                <img src="images/Adaption.jpg " alt="Success">
+                <h2>Ongoing Learning and Adaptation</h2>
+                <p>Darsheel is committed to ongoing learning and adaptation, staying up-to-date with the latest industry
+                    trends and best practices. By continuously refining his strategies and adapting to changing market
+                    dynamics, he ensures your business remains competitive and future-ready. </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="course-section" id="course">
+        <h1>COURSE </h1>
+        <p>Last chance to seize the opportunity! <br>
+            Time is ticking, sign up now before it's too late!</p>
+        <div id="app"></div>
+        <p class="text">Sign up and get the course for </p>
+        <p><del>&#8377;2000</del> <span class="highlighted-price">&#8377;1000</span></p>
+        <button type="button" class="button" onclick="myFunction()">SIGN UP NOW!!</button>
+        <script>
+            function myFunction() {
+                let name = prompt("Enter Your Name");
+                let email = prompt("Enter the email");
+        
+                if (name === null || email === null || name.trim() === "" || email.trim() === "") {
+                    alert("Please enter both Name and Email.");
+                } else {
+                    console.log("Name:", name); // Just For Verification purpose
+                    console.log("Email:", email); // Just For Verification purpose
+                }
+            }
+        </script>
+        <div class="form-container" id="formContainer">
+            <form class="slide-up-form" id="slideUpForm">
+                <h2>Enter Your Details</h2>
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="1234567890 " required>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                setTimeout(function() {
+                    document.getElementById('formContainer').style.bottom = '0'
+                }, 15000); 
+            });
+        </script>
+
+</body>
+
+</html>
