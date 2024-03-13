@@ -16,6 +16,45 @@ function scrollToSection(sectionId) {
     }
 }
 
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("scrollToTopBtn").style.display = "block";
+    } else {
+        document.getElementById("scrollToTopBtn").style.display = "none";
+    }
+}
+
+function topFunction() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+
+
+function isElementInViewport(element) {
+    var rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+function setActive(navLinks, index) {
+    navLinks.forEach(function (link, i) {
+        if (i === index) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+}
+
 
 // Smooth scroll for all IDs
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -38,7 +77,7 @@ var swiper = new Swiper('.swiper-container', {
     spaceBetween: 30,
     loop: true,
     autoplay: {
-        delay: 5000, // 5 seconds delay
+        delay: 3000, // 5 seconds delay
     }
 });
 
@@ -51,35 +90,6 @@ function isInViewport(element) {
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
-}
-
-// Function to animate text
-function animateText(stepIndex, elementId) {
-    const steps = [
-        "Data Cleaning and Preprocessing: Ensuring dataset quality and reliability with techniques like handling missing values and standardizing formats.",
-        "Exploratory Data Analysis (EDA): Uncovering patterns and relationships using visualizations like histograms and scatter plots.",
-        "Feature Engineering: Extracting meaningful insights and improving model performance through techniques like feature scaling and dimensionality reduction.",
-        "Model Building: Predicting outcomes using algorithms such as linear regression and decision trees.",
-        "Model Evaluation and Fine-tuning: Assessing model performance with metrics like accuracy and enhancing predictive capabilities through techniques like cross-validation."
-    ];
-
-    const duration = 30; // Duration in milliseconds
-    const text = steps[stepIndex];
-    let currentText = "";
-    let currentIndex = 0;
-    const interval = setInterval(function () {
-        currentText += text[currentIndex];
-        document.getElementById(elementId).textContent = currentText;
-        currentIndex++;
-        if (currentIndex === text.length) {
-            clearInterval(interval);
-            if (stepIndex < steps.length - 1) {
-                setTimeout(function () {
-                    animateText(stepIndex + 1, `step${stepIndex + 2}`);
-                }, duration);
-            }
-        }
-    }, duration);
 }
 
 // Function to handle scroll event
@@ -97,35 +107,44 @@ window.addEventListener('scroll', handleScroll);
 
 // Function to handle sending a WhatsApp message
 function sendWhatsAppMessage() {
-    var phoneNumber = "+919741273500"; // Replace with your phone number
+    var phoneNumber = "+919741273500";
     var messageLink = "https://wa.me/" + phoneNumber;
     window.open(messageLink);
 }
 
 // Function to handle sending an email
 function sendEmail() {
-    var emailAddress = "boppanadeepak1637@gmail.com"; // Replace with your email address
+    var emailAddress = "boppanadeepak1637@gmail.com";
     var subject = "Subject of your email";
     var body = "Body of your email";
     var emailLink = "mailto:" + encodeURIComponent(emailAddress) + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
     window.location.href = emailLink;
 }
 
-// Load PDF resume and display the first page
-const pdfjsLib = window['pdfjs-dist/build/pdf'];
-const pdfUrl = 'Deepak\'s Resume.pdf';
+// Function to handle the click event on the button
+document.querySelector('.container .btn').addEventListener('click', function () {
+    // Change button text to indicate download is in progress
+    var downloadButton = this.querySelector('.me');
+    var loadingMessage = this.querySelector('.mo');
+    downloadButton.style.display = 'none';
+    loadingMessage.style.display = 'inline';
 
-pdfjsLib.getDocument(pdfUrl).promise.then(function (pdf) {
-    pdf.getPage(1).then(function (page) {
-        const pdfViewer = document.getElementById('pdfViewer');
-        const viewport = page.getViewport({ scale: 1 });
-        const canvas = document.createElement('canvas');
-        const context = canvas.getContext('2d');
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
-        pdfViewer.appendChild(canvas);
+    // Create an anchor element
+    var link = document.createElement('a');
+    link.href = '/Task-01/Resume.pdf';
+    link.download = 'Deepak_Resume';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 
-        // Render the PDF page on the canvas
-        page.render({ canvasContext: context, viewport: viewport });
-    });
+    // Restore button text after download is complete
+    setTimeout(function () {
+        downloadButton.style.display = 'inline';
+        loadingMessage.style.display = 'none';
+    }, 10000); // Adjust the timeout as needed
 });
+
+
+
+
+
